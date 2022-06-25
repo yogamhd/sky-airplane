@@ -1,0 +1,8 @@
+#airplane {
+    background: url(../images/airplane-2.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 441px;
+    height: 135px;
+}
