@@ -1,5 +1,12 @@
 const airplane = document.getElementById('airplane');
 const manJump = document.getElementById('man-jump');
+const canvas = document.getElementById('canvas');
+
+function setBackground() {
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight * 2 + 'px';
+    canvas.style.top = -window.innerHeight + 'px';
+}
 
 function animate() {
     airplane
@@ -43,6 +50,15 @@ function animate() {
             duration: 10000
         })
 
+    canvas
+        .velocity({
+            top: '0',
+        }, {
+            queue: false,
+            duration: 7000,
+        })
+
 }
 
+setBackground()
 animate()
