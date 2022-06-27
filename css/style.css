@@ -31,3 +31,33 @@ body {
     height: 80px;
     transform: scale(0.3, 0.3);
 }
+
+.cloud2 {
+    background: url(../images/cloud-2.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 244px;
+    height: 98px;
+    
+}
+
+.cloud4 {
+    background: url(../images/cloud-4.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 192px;
+    height: 94px;
+    
+}
+
+.cloud5 {
+    background: url(../images/cloud-5.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92px;
+    height: 59px;
+    
+}
