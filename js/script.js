@@ -4,12 +4,21 @@ const canvas = document.getElementById('canvas');
 const clouds = document.getElementById('clouds');
 const totalClouds = 10;
 
+//random number between min and max
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function setClouds(){
     for(let i = 1; 1 <= totalClouds; i++){
         let cloud = document.createElement('div');
         cloud.id = 'cloud' + i;
-        cloud.classList.add('cloud');
+        cloud.classList.add('cloud' + random(1, 5));
+        // cloud.classList.add('cloud' + i);
         clouds.appendChild(cloud);
+
+        cloud.style.left = random(10, window.innerWidth) + 'px';
+        cloud.style.left = random(0, window.innerHeight / 2) + 'px';
     }
 }
 
