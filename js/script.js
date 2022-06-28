@@ -1,6 +1,17 @@
 const airplane = document.getElementById('airplane');
 const manJump = document.getElementById('man-jump');
 const canvas = document.getElementById('canvas');
+const clouds = document.getElementById('clouds');
+const totalClouds = 10;
+
+function setClouds(){
+    for(let i = 1; 1 <= totalClouds; i++){
+        let cloud = document.createElement('div');
+        cloud.id = 'cloud' + i;
+        cloud.classList.add('cloud');
+        clouds.appendChild(cloud);
+    }
+}
 
 function setBackground() {
     canvas.style.width = window.innerWidth + 'px';
@@ -60,5 +71,6 @@ function animate() {
 
 }
 
+setClouds()
 setBackground()
 animate()
