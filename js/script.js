@@ -3,6 +3,7 @@ const manJump = document.getElementById('man-jump');
 const canvas = document.getElementById('canvas');
 const clouds = document.getElementById('clouds');
 const totalClouds = 10;
+const total = 20;
 
 //random number between min and max
 function random(min, max) {
