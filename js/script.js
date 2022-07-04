@@ -79,6 +79,15 @@ function animate() {
             duration: 7000,
         })
 
+    for(let i = 1; 1 <= totalClouds; i++){
+        document.getElementById('cloud + i')
+            .velocity({
+                left: window.innerWidth + 500,
+            }, {
+                duration: 10000
+        })
+    }
+
 }
 
 setClouds()
