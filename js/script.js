@@ -2,7 +2,7 @@ const airplane = document.getElementById('airplane');
 const manJump = document.getElementById('man-jump');
 const canvas = document.getElementById('canvas');
 const clouds = document.getElementById('clouds');
-const totalClouds = 10;
+const totalClouds = 50;
 
 //random number between min and max
 function random(min, max) {
@@ -18,7 +18,7 @@ function setClouds(){
         clouds.appendChild(cloud);
 
         //set position
-        cloud.style.left = random(10, window.innerWidth) + 'px';
+        cloud.style.left = random(-50, (-window.innerWidth * 2)) + 'px';
         cloud.style.left = random(0, window.innerHeight / 2) + 'px';
     }
 }
@@ -80,11 +80,20 @@ function animate() {
         })
 
     for(let i = 1; 1 <= totalClouds; i++){
-        document.getElementById('cloud + i')
+
+        let duration = Math.abs(parseInt(document.getElementById('cloud' + i).style.left) / 100) * 2000;
+
+        // console.log(duration)
+
+        if(duration < 10000){
+            duration = random(10000, 15000);
+        }
+
+        document.getElementById('cloud' + i)
             .velocity({
                 left: window.innerWidth + 500,
             }, {
-                duration: 10000
+                duration: duration
         })
     }
 
