@@ -19,6 +19,7 @@ body {
     right: 0;
     width: 441px;
     height: 135px;
+    z-index: 5;
 }
 
 #man-jump {
@@ -30,6 +31,7 @@ body {
     width: 117px;
     height: 80px;
     transform: scale(0.3, 0.3);
+    z-index: 5;
 }
 
 .cloud1 {

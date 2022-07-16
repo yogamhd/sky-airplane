@@ -20,6 +20,7 @@ function setClouds(){
         //set position
         cloud.style.left = random(-50, (-window.innerWidth * 2)) + 'px';
         cloud.style.left = random(0, window.innerHeight / 2) + 'px';
+        cloud.style.zIndex = random(1, 10);
     }
 }
 
